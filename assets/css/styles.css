@@ -1,0 +1,226 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+VN:wght@100..400&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #6254b5;
+  --first-color-alt: #6353b3;
+  --title-color: #ffcc60;
+  --text-color: #cabdff;
+  --body-color: #fffffe;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --biggest-font-size: 2rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1152px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.main-content {
+  overflow: hidden;
+  z-index: 10;
+  /* For animation */
+}
+
+/*=============== HEADER & NAV ===============*/
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 20px;
+  left: 0;
+  background-color: var(--body-color);
+  z-index: 1;
+}
+
+.site-nav {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo,
+.menu-toggle,
+.menu-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-logo {
+  color: var(--title-color);
+  column-gap: .5rem;
+  font-weight: var(--font-semi-bold);
+  font-size: 18px;
+}
+
+.site-logo i {
+  font-size: 1.55rem;
+  font-weight: initial;
+}
+
+.menu-toggle,
+.menu-close {
+  background-color: var(--first-color);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1023px) {
+  .site-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--body-color);
+    width: 80%;
+    height: 100%;
+    box-shadow: 0 0 16px hsla(286, 58%, 4%, .2);
+    padding: 6rem 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    transition: right .4s;
+  }
+  .site-header{
+    background-color: transparent;
+  }
+  .social-icons {
+    position: absolute;
+    top: 60%;
+    left: 31%;
+    text-align: center;
+  }
+  .flower-image-1 {
+    width: 30px;
+    right: 2rem;
+  }
+  .flower-image-2 {
+    width: 10px;
+    right: -10%;
+    top: 60px;
+  }
+  .flower-image-3 {
+    width: 20px;
+    top: 20%;
+    right: 0rem;
+  }
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.menu-link {
+  columns: var(--text-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+  color: #5034a4;
+}
+
+.menu-link:hover {
+  color: #ffcc6c;
+}
+
+.menu-button {
+  display: inline-block;
+  width: max-content;
+  background-color: var(--body-color);
+  border: 2px solid var(--text-color);
+  padding: 1rem 3rem;
+  border-radius: 4rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.menu-button:hover {
+  background-color: var(--first-color);
+}
+
+.menu-close {
+  position: absolute;
+  top: .75rem;
+  right: 1.5rem;
+}
+
+/* Show menu */
+.show-menu {
+  right: 0;
+}
+
+/*=============== HOME ===============*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For taller devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
+
